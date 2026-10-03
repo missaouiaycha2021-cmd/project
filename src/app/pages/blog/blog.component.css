@@ -1,0 +1,84 @@
+:host { display: block; font-family: Arial, sans-serif; color: #222; }
+a { text-decoration: none; color: inherit; }
+
+/* ===== MENU ===== */
+.header { display: flex; align-items: center; justify-content: space-between; padding: 25px 80px; background: white; }
+.logo { font-size: 48px; font-style: italic; color: #111; }
+.fleur { color: #e8457a; font-size: 28px; }
+.menu { display: flex; gap: 40px; }
+.menu a { text-transform: uppercase; font-size: 18px; color: #111; }
+.menu a:hover, .menu a.actif { color: #f0507f; }
+.icones { display: flex; align-items: center; gap: 35px; }
+.compteur { display: flex; align-items: center; gap: 8px; color: #666; }
+.compteur b { color: #f0507f; font-weight: normal; }
+
+/* ===== BANDEAU ===== */
+.banniere { background: #eeeeef; text-align: center; padding: 70px 20px; }
+.banniere h1 { font-family: Georgia, serif; font-weight: normal; font-size: 58px; margin: 0 0 10px; }
+.fil { margin: 0; text-transform: uppercase; }
+.fil a, .barre { color: #f0507f; }
+.barre { margin: 0 12px; }
+
+/* ===== ARTICLES ===== */
+.blog { padding: 70px 80px; }
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.article {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+.image {
+  font-size: 90px;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.corps { padding: 25px; }
+
+.infos { display: flex; justify-content: space-between; margin: 0 0 12px; font-size: 14px; }
+.categorie { color: #f0507f; font-weight: bold; }
+.date { color: #888; }
+
+.article h2 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 1.4;
+  margin: 0 0 12px;
+}
+
+.resume { color: #555; line-height: 1.7; margin: 0 0 18px; }
+
+.lire { color: #f0507f; font-weight: bold; }
+.lire:hover { text-decoration: underline; }
+
+/* ===== PAGINATION ===== */
+.pagination { display: flex; justify-content: center; gap: 10px; margin-top: 50px; }
+
+.page {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+.page:hover, .page.courante { background: #f0507f; border-color: #f0507f; color: white; }
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .header { padding: 20px; flex-wrap: wrap; gap: 15px; }
+  .menu   { display: none; }
+  .blog   { padding: 40px 20px; }
+  .banniere h1 { font-size: 40px; }
+}

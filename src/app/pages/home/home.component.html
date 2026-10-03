@@ -1,0 +1,98 @@
+
+ <header class="header">
+  <a href="#" class="logo">Florist <span class="fleur">✿</span></a>
+
+  <nav class="menu">
+    <a routerLink="/" class="actif">Home</a>
+    <a routerLink="/about">About</a>
+    <a routerLink="/services">Services</a>
+    <a routerLink="/blog">Blog</a>
+    <a routerLink="/contact">Contact</a>
+  </nav>
+
+  <div class="icones">
+    <!-- loupe -->
+    <a href="#" aria-label="Rechercher">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.6">
+        <circle cx="10" cy="10" r="7"/><path d="M15 15l6 6"/>
+      </svg>
+    </a>
+
+    <!-- favoris -->
+    <a href="#" class="compteur" aria-label="Favoris">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.6">
+        <path d="M12 21C5 15 2 11.5 2 8a5 5 0 0 1 10-1 5 5 0 0 1 10 1c0 3.500-3 7-10 13z"/>
+      </svg>
+      <span>(05)</span>
+    </a>
+
+    <!-- panier -->
+    <a href="#" class="compteur" aria-label="Panier">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.6">
+        <path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+      </svg>
+      <span>(01) <b>$ 65.0</b></span>
+    </a>
+  </div>
+</header>
+
+  <!-- BANDEAU D'ACCUEIL -->
+  <section class="hero">
+    <h1>Des fleurs fraîches pour égayer votre quotidien</h1>
+    <p>Bouquets, plantes et cadeaux livrés chez vous.</p>
+    <a href="#produits" class="bouton">Voir la boutique</a>
+  </section>
+
+  <!-- PRODUITS -->
+  <section class="produits" id="produits">
+    <h2>Nos produits en vente</h2>
+
+    <div class="grille">
+
+      <div class="carte">
+        <div class="image rose">💐</div>
+        <h3>Bouquet de tulipes</h3>
+        <p class="prix">24,90 €</p>
+        <button>Ajouter au panier</button>
+      </div>
+
+      <div class="carte">
+        <div class="image orange">🌹</div>
+        <h3>Roses rouges</h3>
+        <p class="prix"><s>49,00 €</s> 39,00 €</p>
+        <button>Ajouter au panier</button>
+      </div>
+
+      <div class="carte">
+        <div class="image vert">🪴</div>
+        <h3>Plante succulente</h3>
+        <p class="prix">12,90 €</p>
+        <button>Ajouter au panier</button>
+      </div>
+
+      <div class="carte">
+        <div class="image violet">🌵</div>
+        <h3>Cactus en pot</h3>
+        <p class="prix">15,50 €</p>
+        <button>Ajouter au panier</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PIED DE PAGE -->
+  <footer class="footer" id="contact">
+    <div>
+      <h3>Contact</h3>
+      <p>69 North Cleveland Street, Memphis, USA</p>
+      <p>contact&#64;florist.example</p>
+    </div>
+    <div>
+      <h3>Newsletter</h3>
+      <form>
+        <input type="email" placeholder="Votre e-mail" required>
+        <button type="submit">S'inscrire</button>
+      </form>
+    </div>
+    <p class="copyright">© 2026 Florist. Tous droits réservés.</p>
+  </footer>

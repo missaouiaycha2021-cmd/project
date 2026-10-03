@@ -1,0 +1,67 @@
+<!-- ===== MENU ===== -->
+<header class="header">
+  <a routerLink="/" class="logo">Florist <span class="fleur">✿</span></a>
+  <nav class="menu">
+    <a routerLink="/" >Home</a>
+    <a routerLink="/about">About</a>
+    <a routerLink="/services">Services</a>
+    <a routerLink="/blog" class="actif">Blog</a>
+    <a routerLink="/contact">Contact</a>
+  </nav>
+
+  <div class="icones">
+    <a href="#" aria-label="Rechercher">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.6">
+        <circle cx="10" cy="10" r="7"/><path d="M15 15l6 6"/>
+      </svg>
+    </a>
+    <a href="#" class="compteur" aria-label="Favoris">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.6">
+        <path d="M12 21C5 15 2 11.5 2 8a5 5 0 0 1 10-1 5 5 0 0 1 10 1c0 3.500-3 7-10 13z"/>
+      </svg>
+      <span>(05)</span>
+    </a>
+    <a href="#" class="compteur" aria-label="Panier">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.6">
+        <path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+      </svg>
+      <span>(01) <b>$ 65.0</b></span>
+    </a>
+  </div>
+</header>
+
+<!-- ===== BANDEAU ===== -->
+<section class="banniere">
+  <h1>Our blog</h1>
+  <p class="fil">
+    <a routerLink="/">Home</a> <span class="barre">|</span> Blog
+  </p>
+</section>
+
+<!-- ===== ARTICLES ===== -->
+<section class="blog">
+  <div class="grille">
+
+      <article class="article">
+        <div class="image"></div>
+        <div class="corps">
+          <p class="infos">
+            <span class="categorie"></span>
+            <span class="date"></span>
+          </p>
+          <h2></h2>
+          <p class="resume"></p>
+          <a href="#" class="lire">Lire la suite</a>
+        </div>
+      </article>
+    
+  </div>
+
+  <!-- Pagination (visuelle pour le moment) -->
+  <nav class="pagination" aria-label="Pagination">
+    <a href="#" class="page courante">1</a>
+    <a href="#" class="page">2</a>
+    <a href="#" class="page">3</a>
+    <a href="#" class="page">›</a>
+  </nav>
+</section>

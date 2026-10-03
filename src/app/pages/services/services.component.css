@@ -1,0 +1,99 @@
+:host { display: block; font-family: Arial, sans-serif; color: #222; }
+a { text-decoration: none; color: inherit; }
+
+/* ===== MENU ===== */
+.header { display: flex; align-items: center; justify-content: space-between; padding: 25px 80px; background: white; }
+.logo { font-size: 48px; font-style: italic; color: #111; }
+.fleur { color: #e8457a; font-size: 28px; }
+.menu { display: flex; gap: 40px; }
+.menu a { text-transform: uppercase; font-size: 18px; color: #111; }
+.menu a:hover, .menu a.actif { color: #f0507f; }
+.icones { display: flex; align-items: center; gap: 35px; }
+.compteur { display: flex; align-items: center; gap: 8px; color: #666; }
+.compteur b { color: #f0507f; font-weight: normal; }
+
+/* ===== BANDEAU ===== */
+.banniere {
+  position: relative;
+  background: #eeeeef;
+  text-align: center;
+  padding: 70px 20px;
+  overflow: hidden;
+}
+
+.plante { position: absolute; left: 40px; top: -20px; font-size: 200px; opacity: 0.35; }
+
+.banniere h1 {
+  position: relative;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: 58px;
+  margin: 0 0 10px;
+}
+
+.fil { position: relative; margin: 0; text-transform: uppercase; }
+.fil a { color: #f0507f; }
+.barre { color: #f0507f; margin: 0 12px; }
+
+/* ===== SERVICES ===== */
+.services { display: flex; gap: 60px; align-items: flex-start; padding: 80px; }
+.liste { flex: 1; display: flex; flex-direction: column; gap: 60px; }
+
+.boite {
+  position: relative;
+  border: 1px solid #f0507f;
+  padding: 60px 30px 40px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.icone {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 0 20px;
+  font-size: 55px;
+  line-height: 1;
+}
+
+.boite h3 { font-family: Georgia, serif; font-weight: normal; font-size: 28px; margin: 0 0 15px; }
+.boite p  { margin: 0; color: #555; line-height: 1.8; }
+
+/* ===== IMAGE + BOUTON LECTURE ===== */
+.video {
+  position: relative;
+  flex: 1.6;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f3c4d6, #d9e8c9);
+}
+
+.grosse-image { font-size: 220px; }
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  color: #f0507f;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .header   { padding: 20px; flex-wrap: wrap; gap: 15px; }
+  .menu     { display: none; }
+  .services { flex-direction: column; padding: 40px 20px; }
+  .banniere h1 { font-size: 40px; }
+}

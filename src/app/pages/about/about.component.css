@@ -1,0 +1,110 @@
+:host { display: block; font-family: Arial, sans-serif; color: #222; }
+a { text-decoration: none; color: inherit; }
+
+/* ===== MENU ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 80px;
+  background: white;
+}
+
+.logo { font-size: 48px; font-style: italic; color: #111; }
+.fleur { color: #e8457a; font-size: 28px; }
+
+.menu { display: flex; gap: 40px; }
+
+.menu a {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #111;
+}
+
+.menu a:hover,
+.menu a.actif { color: #f0507f; }
+
+.icones { display: flex; align-items: center; gap: 35px; }
+
+.compteur {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+}
+
+.compteur b { color: #f0507f; font-weight: normal; }
+
+/* ===== TITRE DE LA PAGE ===== */
+.about-hero {
+  background: #f8dce8;
+  text-align: center;
+  padding: 80px 20px;
+}
+.about-hero h1 { font-size: 40px; margin: 0 0 10px; }
+.about-hero p  { margin: 0; }
+
+/* ===== NOTRE HISTOIRE ===== */
+.histoire {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 70px 80px;
+}
+
+.image {
+  flex: 1;
+  font-size: 140px;
+  text-align: center;
+  background: #fbe4ee;
+  border-radius: 10px;
+  padding: 60px 0;
+}
+
+.texte { flex: 1; line-height: 1.8; }
+.texte h2 { font-size: 30px; }
+
+/* ===== NOS VALEURS ===== */
+.valeurs {
+  padding: 50px 80px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.valeur {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.valeur span { font-size: 45px; }
+
+/* ===== CHIFFRES ===== */
+.chiffres {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.chiffres strong { font-size: 36px; color: #e8457a; }
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .header  { padding: 20px; flex-wrap: wrap; gap: 15px; }
+  .menu    { display: none; }
+}
+
+@media (max-width: 800px) {
+  .histoire { flex-direction: column; padding: 40px 20px; }
+  .valeurs  { padding: 40px 20px; }
+  .chiffres { flex-direction: column; gap: 25px; }
+}

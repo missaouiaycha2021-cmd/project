@@ -1,0 +1,82 @@
+<!-- ===== MENU ===== -->
+<header class="header">
+  <a routerLink="/" class="logo">Florist <span class="fleur">✿</span></a>
+
+  <nav class="menu">
+    <a routerLink="/" >Home</a>
+    <a routerLink="/about">About</a>
+    <a routerLink="/services">Services</a>
+    <a routerLink="/blog" >Blog</a>
+    <a routerLink="/contact" class="actif">Contact</a>
+  </nav>
+
+  <div class="icones">
+    <a href="#" aria-label="Rechercher">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.6">
+        <circle cx="10" cy="10" r="7"/><path d="M15 15l6 6"/>
+      </svg>
+    </a>
+    <a href="#" class="compteur" aria-label="Favoris">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.6">
+        <path d="M12 21C5 15 2 11.5 2 8a5 5 0 0 1 10-1 5 5 0 0 1 10 1c0 3.500-3 7-10 13z"/>
+      </svg>
+      <span>(05)</span>
+    </a>
+    <a href="#" class="compteur" aria-label="Panier">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.6">
+        <path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+      </svg>
+      <span>(01) <b>$ 65.0</b></span>
+    </a>
+  </div>
+</header>
+
+<!-- ===== BANDEAU ===== -->
+<section class="banniere">
+  <h1>Contact us</h1>
+  <p class="fil">
+    <a routerLink="/">Home</a> <span class="barre">|</span> Contact
+  </p>
+</section>
+
+<!-- ===== CONTENU ===== -->
+<section class="contact">
+
+  <!-- Coordonnées -->
+  <div class="infos">
+    <h2>Nous contacter</h2>
+    <p class="intro">Une question sur une commande ou un bouquet sur mesure ? Écrivez-nous, nous répondons sous 24 h.</p>
+
+    <div class="ligne"><span class="ico">📍</span><div><strong>Adresse</strong><p>69 North Cleveland Street, Memphis, USA</p></div></div>
+    <div class="ligne"><span class="ico">📞</span><div><strong>Téléphone</strong><p>(123) 8111 9210</p></div></div>
+    <div class="ligne"><span class="ico">✉️</span><div><strong>E-mail</strong><p>contact&#64;florist.example</p></div></div>
+    <div class="ligne"><span class="ico">🕘</span><div><strong>Horaires</strong><p>Lundi – Samedi : 9h – 19h</p></div></div>
+  </div>
+
+  <!-- Formulaire -->
+  <form class="formulaire" #f="ngForm" (ngSubmit)="envoyer()">
+    <h2>Envoyer un message</h2>
+
+    @if (envoye) {
+      <p class="succes" role="status">Merci ! Votre message a bien été envoyé.</p>
+    }
+
+    <label for="nom">Nom</label>
+    <input id="nom" name="nom" type="text" required minlength="2" maxlength="80" [(ngModel)]="nom" #n="ngModel">
+    @if (n.invalid && n.touched) { <small class="erreur">Veuillez saisir votre nom.</small> }
+
+    <label for="email">E-mail</label>
+    <input id="email" name="email" type="email" required email maxlength="120" [(ngModel)]="email" #e="ngModel">
+    @if (e.invalid && e.touched) { <small class="erreur">Adresse e-mail invalide.</small> }
+
+    <label for="sujet">Sujet</label>
+    <input id="sujet" name="sujet" type="text" required maxlength="120" [(ngModel)]="sujet">
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="6" required minlength="10" maxlength="2000" [(ngModel)]="message" #m="ngModel"></textarea>
+    @if (m.invalid && m.touched) { <small class="erreur">Votre message doit contenir au moins 10 caractères.</small> }
+
+    <button type="submit" [disabled]="f.invalid">Envoyer</button>
+  </form>
+
+</section>
