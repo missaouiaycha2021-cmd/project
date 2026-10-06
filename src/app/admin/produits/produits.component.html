@@ -1,0 +1,78 @@
+
+<body>
+  <div class="adm">
+    <aside class="adm-nav">
+      <a href="#" class="adm-logo">E-shop</a>
+      <p class="adm-sous">Administration</p>
+      <nav aria-label="Administration">
+         <a routerLink="/admin/dashboard" >Tableau de bord</a>
+         <a routerLink="/admin/categories"  >Catégories</a>
+         <a routerLink="/admin/produits" routerLinkActive="actif">Produits</a>
+        <a routerLink="/admin/clients">Clients</a>
+        <a routerLink="/admin/commandes" >Commandes</a>
+      </nav>
+      <a href="connexion.html" class="adm-lien">Se déconnecter</a>
+    </aside>
+
+    <main class="adm-main">
+      <header class="adm-entete">
+        <h1>Produits</h1>
+        <a href="produit-form.html" class="adm-btn">Ajouter un produit</a>
+      </header>
+
+      <div class="adm-filtres">
+        <input type="search" placeholder="Rechercher un produit" aria-label="Rechercher un produit">
+        <select aria-label="Filtrer par catégorie">
+          <option>Toutes les catégories</option><option>Femme</option><option>Homme</option><option>Enfant</option><option>Accessoires</option>
+        </select>
+      </div>
+
+      <div class="adm-defile">
+        <table class="adm-table">
+          <thead><tr><th>Produit</th><th>Catégorie</th><th>Prix</th><th>Stock</th><th>En ligne</th><th></th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Robe fluide</td><td>Femme</td><td>59,90 €</td><td>14</td>
+              <td><input type="checkbox" checked aria-label="Mettre Robe fluide en ligne"></td>
+              <td class="adm-actions"><a href="produit-form.html">Modifier</a><button type="button" class="adm-lien">Supprimer</button></td>
+            </tr>
+            <tr>
+              <td>Chemise en lin</td><td>Homme</td><td>44,50 €</td><td>22</td>
+              <td><input type="checkbox" checked aria-label="Mettre Chemise en lin en ligne"></td>
+              <td class="adm-actions"><a href="produit-form.html">Modifier</a><button type="button" class="adm-lien">Supprimer</button></td>
+            </tr>
+            <tr>
+              <td>Manteau long</td><td>Femme</td><td><s>179,00 €</s> 139,00 €</td><td class="alerte">4</td>
+              <td><input type="checkbox" checked aria-label="Mettre Manteau long en ligne"></td>
+              <td class="adm-actions"><a href="produit-form.html">Modifier</a><button type="button" class="adm-lien">Supprimer</button></td>
+            </tr>
+            <tr>
+              <td>Jean droit brut</td><td>Homme</td><td>64,90 €</td><td>31</td>
+              <td><input type="checkbox" checked aria-label="Mettre Jean droit brut en ligne"></td>
+              <td class="adm-actions"><a href="produit-form.html">Modifier</a><button type="button" class="adm-lien">Supprimer</button></td>
+            </tr>
+            <tr>
+              <td>Pull en maille</td><td>Femme</td><td>69,00 €</td><td>9</td>
+              <td><input type="checkbox" checked aria-label="Mettre Pull en maille en ligne"></td>
+              <td class="adm-actions"><a href="produit-form.html">Modifier</a><button type="button" class="adm-lien">Supprimer</button></td>
+            </tr>
+            <tr>
+              <td>Veste en jean</td><td>Enfant</td><td>84,00 €</td><td class="alerte">3</td>
+              <td><input type="checkbox" checked aria-label="Mettre Veste en jean en ligne"></td>
+              <td class="adm-actions"><a href="produit-form.html">Modifier</a><button type="button" class="adm-lien">Supprimer</button></td>
+            </tr>
+            <tr>
+              <td>T-shirt en coton</td><td>Homme</td><td>24,90 €</td><td>58</td>
+              <td><input type="checkbox" checked aria-label="Mettre T-shirt en coton en ligne"></td>
+              <td class="adm-actions"><a href="produit-form.html">Modifier</a><button type="button" class="adm-lien">Supprimer</button></td>
+            </tr>
+            <tr>
+              <td>Baskets blanches</td><td>Accessoires</td><td><s>113,00 €</s> 79,00 €</td><td class="alerte">0</td>
+              <td><input type="checkbox" aria-label="Mettre Baskets blanches en ligne"></td>
+              <td class="adm-actions"><a href="produit-form.html">Modifier</a><button type="button" class="adm-lien">Supprimer</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
